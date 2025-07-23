@@ -22,7 +22,7 @@ jobs:
           UNITY_API_KEY: "ee7885f5feb094fac060dffcb6c6c024"
           ORG_ID: "7972054929240"
           PROJECT_ID: "1239c6ed-1d46-47ea-ad4d-e8eab0e905f7"
-          BUILD_TARGET: "windows"
+          BUILD_TARGET: "standalonewindows"
         run: |
           # Debug: Check API key
           if [ -z "$UNITY_API_KEY" ]; then
