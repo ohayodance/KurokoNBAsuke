@@ -3,7 +3,7 @@ name: Sync Unity Cloud to GitHub
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 * * * *'
+    - cron: '0 * * * *'  # Every hour
 
 jobs:
   sync:
@@ -14,7 +14,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install jq (JSON processor)
+      - name: Install jq
         run: sudo apt-get install -y jq
 
       - name: Download from Unity Cloud
@@ -24,17 +24,26 @@ jobs:
           PROJECT_ID: "1239c6ed-1d46-47ea-ad4d-e8eab0e905f7"
           BUILD_TARGET: "windows"
         run: |
-          # Get latest build data using correct API endpoint
+          # Debug: Check API key
+          if [ -z "$UNITY_API_KEY" ]; then
+            echo "❌ ERROR: UNITY_API_KEY is empty!"
+            exit 1
+          fi
+
+          # Fetch latest build
           BUILD_DATA=$(curl -s -H "Authorization: Bearer $UNITY_API_KEY" \
             "https://build-api.cloud.unity3d.com/api/v1/orgs/$ORG_ID/projects/$PROJECT_ID/buildtargets/$BUILD_TARGET/builds?perPage=1&latest=true")
 
-          echo "Build data: $BUILD_DATA" # Debug output
+          # Check for errors
+          if echo "$BUILD_DATA" | jq -e '.error' > /dev/null; then
+            echo "❌ API Error: $(echo "$BUILD_DATA" | jq -r '.error')"
+            exit 1
+          fi
 
-          # Extract download URL
           DOWNLOAD_URL=$(echo "$BUILD_DATA" | jq -r '.builds[0].links.download_primary.href')
-          echo "Download URL: $DOWNLOAD_URL" # Debug output
+          echo "Downloading from: $DOWNLOAD_URL"
 
-          # Download and unzip
+          # Download & extract
           curl -L -o latest_build.zip "$DOWNLOAD_URL"
           unzip -o latest_build.zip -d ./temp_build
           rm latest_build.zip
@@ -49,7 +58,7 @@ jobs:
           git config --global user.email "actions@github.com"
           git add .
           if git diff --quiet && git diff --staged --quiet; then
-            echo "No changes to commit"
+            echo "✅ No changes to commit."
           else
             git commit -m "Auto-sync from Unity Cloud"
             git push
