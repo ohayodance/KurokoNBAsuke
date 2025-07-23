@@ -1,0 +1,3 @@
+repository "KurokoNBAsuke/KurokoNBAsuke@7972054929240@cloud"
+  path "/"
+    smartbranch "/main/dev"

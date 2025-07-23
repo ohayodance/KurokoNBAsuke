@@ -1,0 +1,87 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Alex\\KurokoNBAsuke\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F1110FB9-4076-5A56-B013-6D83FB3CAB68}|Assembly-CSharp.csproj|c:\\users\\alex\\kurokonbasuke\\assets\\scripts\\thirdpersoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1110FB9-4076-5A56-B013-6D83FB3CAB68}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\thirdpersoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1110FB9-4076-5A56-B013-6D83FB3CAB68}|Assembly-CSharp.csproj|C:\\Users\\Alex\\KurokoNBAsuke\\assets\\scripts\\ballcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1110FB9-4076-5A56-B013-6D83FB3CAB68}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ballcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1110FB9-4076-5A56-B013-6D83FB3CAB68}|Assembly-CSharp.csproj|c:\\users\\alex\\kurokonbasuke\\assets\\scripts\\triggerdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1110FB9-4076-5A56-B013-6D83FB3CAB68}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\triggerdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1110FB9-4076-5A56-B013-6D83FB3CAB68}|Assembly-CSharp.csproj|C:\\Users\\Alex\\KurokoNBAsuke\\assets\\scripts\\dunks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1110FB9-4076-5A56-B013-6D83FB3CAB68}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\dunks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TriggerDetector.cs",
+              "DocumentMoniker": "C:\\Users\\Alex\\KurokoNBAsuke\\Assets\\Scripts\\TriggerDetector.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\TriggerDetector.cs",
+              "ToolTip": "C:\\Users\\Alex\\KurokoNBAsuke\\Assets\\Scripts\\TriggerDetector.cs",
+              "RelativeToolTip": "Assets\\Scripts\\TriggerDetector.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T00:53:18.429Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BallController.cs",
+              "DocumentMoniker": "C:\\Users\\Alex\\KurokoNBAsuke\\Assets\\Scripts\\BallController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\BallController.cs",
+              "ToolTip": "C:\\Users\\Alex\\KurokoNBAsuke\\Assets\\Scripts\\BallController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\BallController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwGoAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T00:39:55.857Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Dunks.Cs",
+              "DocumentMoniker": "C:\\Users\\Alex\\KurokoNBAsuke\\Assets\\Scripts\\Dunks.Cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Dunks.Cs",
+              "ToolTip": "C:\\Users\\Alex\\KurokoNBAsuke\\Assets\\Scripts\\Dunks.Cs",
+              "RelativeToolTip": "Assets\\Scripts\\Dunks.Cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAIwA0AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T23:28:36.1Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ThirdPersonController.cs",
+              "DocumentMoniker": "C:\\Users\\Alex\\KurokoNBAsuke\\Assets\\Scripts\\ThirdPersonController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ThirdPersonController.cs",
+              "ToolTip": "C:\\Users\\Alex\\KurokoNBAsuke\\Assets\\Scripts\\ThirdPersonController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ThirdPersonController.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAmwGgAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T00:58:32.936Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
