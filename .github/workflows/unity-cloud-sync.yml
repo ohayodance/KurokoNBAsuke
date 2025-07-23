@@ -27,7 +27,9 @@ jobs:
           PROJECT_ID: "1239c6ed-1d46-47ea-ad4d-e8eab0e905f7" # ID проекта в Unity Cloud
           BUILD_TARGET: "windows" # Например, "android", "ios", "webgl"
         run: |
-          npm install -g unity-cli@latest
+          npm uninstall -g unity-cli
+          curl -H "Authorization: Bearer $UNITY_API_KEY" \
+          "https://cloud-api.unity.com/v1/orgs/$ORG_ID/projects/$PROJECT_ID/buildtargets
           
           BUILD_DATA=$(curl -s -H "Authorization: Bearer $UNITY_API_KEY" \
             "https://cloud-api.unity.com/v1/orgs/$ORG_ID/projects/$PROJECT_ID/buildtargets/$BUILD_TARGET/builds?perPage=1&latest=true")
