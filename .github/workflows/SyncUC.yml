@@ -14,6 +14,9 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Install jq (JSON processor)
+        run: sudo apt-get install -y jq
+
       - name: Download from Unity Cloud
         env:
           UNITY_API_KEY: ${{ secrets.UNITY_CLOUD_API_KEY }}
@@ -21,16 +24,15 @@ jobs:
           PROJECT_ID: "1239c6ed-1d46-47ea-ad4d-e8eab0e905f7"
           BUILD_TARGET: "windows"
         run: |
-          # First request to check build targets
-          curl -H "Authorization: Bearer $UNITY_API_KEY" \
-            "https://cloud-api.unity.com/v1/orgs/$ORG_ID/projects/$PROJECT_ID/buildtargets"
-          
-          # Get latest build data
+          # Get latest build data using correct API endpoint
           BUILD_DATA=$(curl -s -H "Authorization: Bearer $UNITY_API_KEY" \
-            "https://cloud-api.unity.com/v1/orgs/$ORG_ID/projects/$PROJECT_ID/buildtargets/$BUILD_TARGET/builds?perPage=1&latest=true")
+            "https://build-api.cloud.unity3d.com/api/v1/orgs/$ORG_ID/projects/$PROJECT_ID/buildtargets/$BUILD_TARGET/builds?perPage=1&latest=true")
+
+          echo "Build data: $BUILD_DATA" # Debug output
 
           # Extract download URL
           DOWNLOAD_URL=$(echo "$BUILD_DATA" | jq -r '.builds[0].links.download_primary.href')
+          echo "Download URL: $DOWNLOAD_URL" # Debug output
 
           # Download and unzip
           curl -L -o latest_build.zip "$DOWNLOAD_URL"
